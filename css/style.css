@@ -1,0 +1,534 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Microsoft JhengHei", "sans-serif";
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+abbr,
+a {
+  text-decoration: none;
+}
+
+#page-wrapper {
+  /*
+  width: 100vw;
+  */
+  margin: auto;
+}
+
+#banner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+#banner::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1) 90%),
+    url(../cssgarden_images/top1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+#banner::after {
+  content: "scroll down";
+  font-size: 1rem;
+  color: white;
+  position: relative;
+  top: 10%;
+  z-index: -1;
+  animation: scrolldown 1.5s infinite 0.5s ease-in-out;
+}
+
+@keyframes scrolldown {
+  from {
+    top: 20%;
+  }
+  to {
+    top: 25%;
+  }
+}
+
+#banner h1 {
+  font-size: 3rem;
+  position: relative;
+}
+
+#banner h2 abbr {
+  text-decoration: none;
+}
+
+#zen-summary {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: 0;
+  background-color: black;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 1), transparent 20%, rgba(0, 0, 0, 1) 95%),
+    linear-gradient(90deg, rgba(0, 0, 0, 1), transparent 30%, rgb(0, 0, 0) 80%),
+    linear-gradient(180deg, rgba(0, 0, 0, 1), transparent 30%, rgba(0, 0, 0, 1) 98%),
+    url(../cssgarden_images/tel.png) no-repeat center/70% auto;
+}
+#zen-summary::before {
+  content: "";
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background: url(../cssgarden_images/glitch_bg.jpg) no-repeat center/60% 100%;
+  background-attachment: fixed;
+}
+
+#zen-summary::after {
+  content: "";
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: url(../cssgarden_images/tel2.png) no-repeat center/70% auto;
+  pointer-events: none;
+  filter: grayscale(1);
+  background-attachment: fixed;
+}
+
+#zen-summary p {
+  width: 35%;
+  position: relative;
+  top: 60%;
+  left: 25%;
+  margin-bottom: 8%;
+  animation: glitch 0.8s infinite normal;
+}
+
+@keyframes glitch {
+  0% {
+    top: 60%;
+    left: 25%;
+    color: white;
+  }
+  49% {
+    top: 60%;
+    left: 25%;
+    color: white;
+  }
+  50% {
+    top: 55%;
+    left: 26%;
+    color: red;
+  }
+  51% {
+    top: 60%;
+    left: 25%;
+    color: white;
+  }
+  79% {
+    top: 60%;
+    left: 25%;
+    color: white;
+  }
+  80% {
+    top: 75%;
+    left: 24%;
+    color: blue;
+  }
+  81% {
+    top: 60%;
+    left: 25%;
+    color: white;
+  }
+}
+
+.download {
+  font-size: 1.2rem;
+}
+
+#zen-summary p a {
+  color: white;
+  animation: glitch 2s infinite normal;
+}
+
+#zen-preamble {
+  width: 100%;
+  height: 100vh;
+  background: black;
+  position: relative;
+}
+
+#zen-preamble ::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background: url(../cssgarden_images/tel2.png) no-repeat center/70% auto;
+  background-attachment: fixed;
+  pointer-events: none;
+}
+
+#zen-preamble h3 {
+  width: 100vw;
+  height: 100vh;
+  font-size: 2.3rem;
+  position: absolute;
+  top: 0;
+  left: -8%;
+  margin: auto;
+  color: turquoise;
+  text-align: center;
+  transition: 0.8s ease-in-out;
+}
+
+#zen-preamble p {
+  font-size: 1.3rem;
+  font-weight: lighter;
+  position: relative;
+  width: 30%;
+  top: 20%;
+  left: 27%;
+  margin-bottom: 3%;
+  text-align: left;
+  color: black;
+  z-index: 1;
+}
+
+#zen-preamble .p1 {
+  transition: 0.8s ease-in-out;
+}
+#zen-preamble .p2 {
+  transition: 0.8s 0.3s ease-in-out;
+}
+#zen-preamble .p3 {
+  transition: 0.8s 0.5s ease-in-out;
+}
+
+#zen-supporting {
+  width: 100%;
+  height: auto;
+  background: black;
+  background-attachment: fixed;
+  position: relative;
+  padding: 3rem 0 5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#zen-explanation {
+  width: 60%;
+  height: 80vh;
+  margin-bottom: 1.5%;
+  margin-left: 8rem;
+}
+
+#zen-participation,
+#zen-benefits,
+#zen-requirements {
+  width: 60%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+#zen-participation {
+  left: 0%;
+}
+
+#zen-benefits {
+  left: 20%;
+}
+
+#zen-requirements {
+  left: 40%;
+}
+
+#zen-explanation p a,
+#zen-participation p a,
+#zen-benefits p a,
+#zen-requirements p a,
+#footer a {
+  color: white;
+}
+
+#zen-explanation p {
+  width: 65%;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: lighter;
+}
+
+#zen-explanation h3 {
+  font-size: 5rem;
+  font-weight: bolder;
+  margin-bottom: 1.5rem;
+}
+
+#zen-explanation::after {
+  content: "";
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 10%;
+  left: 70%;
+  background: url(../cssgarden_images/glitch_patt-02.png) no-repeat center/cover;
+  z-index: 2;
+  animation: float 3s infinite 1.5s normal;
+}
+
+#zen-explanation::before {
+  content: "";
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 15%;
+  left: 65%;
+  background: url(../cssgarden_images/glitch_patt-03.png) no-repeat center/cover;
+  z-index: 2;
+  animation: float 3s infinite normal;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+#zen-participation::after {
+  content: "";
+  white-space: pre-line;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 15%;
+  left: 95%;
+  background: url(../cssgarden_images/glitch_patt-04.png) no-repeat center/cover;
+  z-index: 2;
+  animation: float 3s 1s infinite normal;
+}
+
+#zen-participation::before {
+  content: "";
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 70%;
+  left: 125%;
+  background: url(../cssgarden_images/glitch_patt-03.png) no-repeat center/cover;
+  z-index: 2;
+  animation: float 3s 0.5s infinite normal;
+}
+
+#zen-benefits::before {
+  content: "";
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 70%;
+  left: 0%;
+  background: url(../cssgarden_images/glitch_patt-05.png) no-repeat center/cover;
+  z-index: 2;
+  animation: float 3s 0.5s infinite normal;
+}
+
+#zen-benefits::after {
+  content: "!@#$%^&#$%^*$%^#$%^!!& \A*!$%^&*$%!^$%^&* \A \00a0 \00a0 \00a0*!$%^&*$%! \A*!$%^&*$%!^$%^&* \A \00a0 \00a0 \00a0 \00a0*!$%^&*$%!^&*$%^&!$%^&*!@#$@@ \A #$%^*$%^#$%^!!&";
+  white-space: pre-line;
+  position: absolute;
+  top: 120%;
+  left: -10%;
+  color: white;
+  z-index: 2;
+  animation: glitch2 1s infinite normal;
+}
+
+#zen-requirements::after {
+  content: "%^*$%^#$%^!!& \A \00a0 *!$%^&*$%! \A*!$%^&*$%!^$%^&* \A \00a0 \00a0 \00a0 \00a0*!$%^&*$%!^&*$%^&!$%";
+  white-space: pre-line;
+  position: absolute;
+  top: -70%;
+  left: 43%;
+  color: rgb(194, 194, 194);
+  z-index: 2;
+  animation: glitch2 1s infinite 0.5s normal;
+}
+
+@keyframes glitch2 {
+  0% {
+    transform: translate(0, 0);
+    color: rgb(194, 194, 194);
+  }
+  49% {
+    transform: translate(0, 0);
+    color: rgb(194, 194, 194);
+  }
+  50% {
+    transform: translate(2px, 3px);
+    color: red;
+  }
+  51% {
+    transform: translate(0, 0);
+    color: rgb(194, 194, 194);
+  }
+  79% {
+    transform: translate(0, 0);
+    color: rgb(194, 194, 194);
+  }
+  80% {
+    transform: translate(-2px, -3px);
+    color: blue;
+  }
+  81% {
+    transform: translate(0, 0);
+    color: rgb(194, 194, 194);
+  }
+}
+
+#zen-participation h3,
+#zen-benefits h3,
+#zen-requirements h3 {
+  width: 100%;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+#zen-participation p,
+#zen-benefits p,
+#zen-requirements p {
+  width: 50%;
+  line-height: 1.5rem;
+  font-weight: lighter;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+#footer {
+  height: 500px;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-around;
+  bottom: 5%;
+  left: 20%;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#footer a {
+  width: 300px;
+  transition: all 1s;
+  z-index: 1;
+}
+
+#footer a:hover {
+  background: linear-gradient(45deg, rgb(119, 246, 255) 1px, transparent 0);
+  background-size: 10px 10px;
+}
+
+aside {
+  background: cadetblue;
+}
+
+.cursor {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(2.5);
+}
+
+#sidebar {
+  width: 100%;
+  height: auto;
+  background: url(../cssgarden_images/glitch3.jpg) no-repeat center / cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+#sidebar::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background: url(../cssgarden_images/tel2.png) no-repeat center/70% auto;
+  background-attachment: fixed;
+  pointer-events: none;
+  filter: grayscale(1);
+}
+
+#wrapper {
+  width: 70%;
+  margin: auto;
+  padding: 9% 0;
+}
+
+#design-selection a,
+#design-archives a,
+#zen-resources a {
+  color: white;
+}
+
+#design-selection {
+  width: 100%;
+  height: 25vh;
+  position: relative;
+  left: 40%;
+}
+
+#design-archives {
+  width: 100%;
+  height: 10vh;
+  position: relative;
+  left: 20%;
+}
+
+#zen-resources {
+  height: 25vh;
+  position: relative;
+  left: 40%;
+}
