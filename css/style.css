@@ -241,8 +241,8 @@ a {
 
 #zen-explanation {
   width: 60%;
-  height: 80vh;
-  margin-bottom: 1.5%;
+  height: auto;
+  margin-bottom: 2.5rem;
   margin-left: 8rem;
 }
 
@@ -282,7 +282,7 @@ a {
 #zen-explanation p {
   width: 65%;
   font-size: 1.5rem;
-  line-height: 2.5rem;
+  line-height: 2rem;
   font-weight: lighter;
 }
 
@@ -504,7 +504,7 @@ aside {
 #wrapper {
   width: 70%;
   margin: auto;
-  padding: 9% 0;
+  padding: 15% 0;
 }
 
 #design-selection a,
@@ -515,20 +515,21 @@ aside {
 
 #design-selection {
   width: 100%;
-  height: 25vh;
+  height: auto;
   position: relative;
-  left: 40%;
+  left: 30%;
 }
 
 #design-archives {
   width: 100%;
-  height: 10vh;
+  height: auto;
   position: relative;
-  left: 20%;
+  left: 15%;
 }
 
 #zen-resources {
-  height: 25vh;
+  width: 100%;
+  height: auto;
   position: relative;
   left: 40%;
 }
